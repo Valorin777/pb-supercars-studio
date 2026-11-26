@@ -22,7 +22,7 @@
   position: absolute;
   inset: auto 12px 2px;
   height: 2px;
-  background: var(--accent, #d6ed76);
+  background: var(--accent);
   content: "";
 }
 
@@ -42,7 +42,7 @@
 }
 
 .pb-top .top-right .cart-btn.is-on {
-  color: var(--accent, #d6ed76);
+  color: var(--accent);
 }
 
 .pb-top .pb-contact {
@@ -51,12 +51,12 @@
   justify-content: center;
   pointer-events: auto;
   font-weight: 700;
-  background: var(--accent, #d6ed76);
-  color: #131512;
+  background: var(--accent-fill);
+  color: var(--accent-ink);
 }
 
 .pb-top .pb-contact:hover {
-  background: #e5f79e;
+  background: var(--accent-hover);
 }
 
 .pb-mobile-explore {
@@ -82,8 +82,8 @@
 }
 
 .pb-mobile-explore-toggle[aria-expanded='true'] {
-  border-color: var(--accent, #d6ed76);
-  color: var(--accent, #d6ed76);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .pb-mobile-explore-toggle span {
@@ -117,14 +117,14 @@
 
 .pb-mobile-sections a:hover,
 .pb-mobile-sections a[aria-current] {
-  background: #262b1a;
-  color: var(--accent, #d6ed76);
+  background: #3f2629;
+  color: var(--accent);
 }
 
 .pb-top a:focus-visible,
 .pb-top button:focus-visible,
 .bbar .bb-it:focus-visible {
-  outline: 2px solid var(--accent, #d6ed76);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
@@ -133,8 +133,14 @@
   font-family: inherit;
 }
 
+.pb-top .monogram span { color: var(--accent); }
+
 .bbar .bb-pill {
-  background: var(--accent, #d6ed76);
+  background: var(--accent-fill);
+}
+
+.bbar .bb-it.is-on, .bbar .bb-it.is-hover {
+  color: var(--accent-ink);
 }
 
 .bbar .bb-it {
@@ -165,12 +171,12 @@
 .unified-gallery {
   --gallery-text: #eeece5;
   --gallery-muted: #bfc2b5;
-  --gallery-surface: #181b16;
+  --gallery-surface: #1b1819;
 }
 
 .unified-stage,
 .gallery-dialog-media {
-  background: var(--gallery-surface, #181b16);
+  background: var(--gallery-surface, #1b1819);
   touch-action: pan-y pinch-zoom;
 }
 
@@ -214,7 +220,7 @@
 .unified-thumbs button {
   background: var(--gallery-surface);
   color: var(--gallery-muted);
-  border-color: #7f88742b;
+  border-color: #82767558;
 }
 
 .unified-thumbs button:hover {
@@ -223,7 +229,7 @@
 
 .unified-thumbs button.selected {
   color: var(--gallery-text);
-  border-color: var(--accent, #d6ed76);
+  border-color: var(--accent);
 }
 
 .unified-thumbs .gallery-picture {
@@ -261,8 +267,9 @@
 .gallery-step:hover,
 .gallery-expand:hover,
 .gallery-close:hover {
-  color: #131512;
-  background: var(--accent, #d6ed76);
+  color: var(--accent-ink);
+  background: var(--accent-fill);
+  border-color: var(--accent-fill);
 }
 
 .gallery-step:focus-visible,
@@ -273,7 +280,7 @@
 .gallery-film-button:focus-visible,
 .gallery-caption-actions a:focus-visible,
 .gallery-dialog-film video:focus-visible {
-  outline: 2px solid var(--accent, #d6ed76);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
@@ -303,16 +310,16 @@
   gap: 6px;
   min-height: 44px;
   padding: 0 9px;
-  border: 1px solid #a4ad8c66;
+  border: 1px solid #a68e8f66;
   border-radius: 5px;
-  background: #272b21;
+  background: #332426;
   color: var(--gallery-text);
   font-size: inherit;
   font-weight: 750;
 }
 
 .gallery-film-button svg {
-  color: var(--accent, #d6ed76);
+  color: var(--accent);
 }
 
 .gallery-film-button small {
@@ -322,7 +329,7 @@
 }
 
 .gallery-film-button:hover {
-  border-color: var(--accent, #d6ed76);
+  border-color: var(--accent);
 }
 
 .gallery-credit a {
@@ -331,7 +338,7 @@
 }
 
 .gallery-credit a:hover {
-  color: var(--accent, #d6ed76);
+  color: var(--accent);
 }
 
 .gallery-sr {
@@ -420,7 +427,7 @@ dialog.gallery-lightbox > .gallery-dialog-inner {
   align-items: center;
   gap: 5px;
   padding-block: 3px;
-  color: var(--accent, #d6ed76);
+  color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
 }

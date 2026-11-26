@@ -3,14 +3,12 @@
   --booking-panel: #1c1a18;
   --booking-text: #f1e9de;
   --booking-muted: #c6bfb4;
-  --booking-accent: var(--accent, #d6ed76);
+  --booking-accent: var(--accent);
   color: var(--booking-text);
   color-scheme: dark;
 }
 
 .pb-dialog .modal:has(.pb-booking) > .modal-head { background-color: #141413; }
-.pb-booking .primary { background: var(--booking-accent); color: #131512; }
-.pb-booking .primary:hover { background: #e5f3a8; }
 .pb-booking :is(input, select, textarea) { scroll-margin-top: 70px; }
 
 .pb-booking .booking-overview {
@@ -104,7 +102,7 @@
   cursor: pointer;
 }
 
-.pb-booking .booking-period-grid [data-selected='true'] { border-color: var(--booking-accent); }
+.pb-booking .booking-period-grid [data-selected='true'] { border-color: var(--booking-accent); background: #302020; }
 .pb-booking .booking-period-grid label small { display: block; margin-top: 3px; }
 .pb-booking .booking-period-grid label small, .pb-booking .booking-option small { color: var(--booking-muted); font-size: .69rem; font-weight: 450; }
 .pb-booking .booking-period-price { font-variant-numeric: tabular-nums; text-align: right; }
@@ -137,7 +135,7 @@
 }
 
 .pb-booking .booking-notice p { margin: 0; }
-.pb-booking .booking-notice svg { flex: none; }
+.pb-booking .booking-notice svg { color: var(--booking-accent); flex: none; }
 .pb-booking .booking-error { color: #ffc3bb; }
 .pb-booking input[aria-invalid='true'] { border-color: #ec7167 !important; }
 .pb-booking .booking-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 9px 14px; }

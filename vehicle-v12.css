@@ -1,0 +1,65 @@
+.vehicle-source-note {
+  display: grid;
+  justify-items: start;
+  gap: 4px;
+  margin-top: 14px;
+  color: #c6c0b8;
+  font-size: .8rem;
+}
+
+.vehicle-source-links { display: flex; flex-wrap: wrap; column-gap: 16px; }
+
+.vehicle-source-note a, .pb-booking .booking-contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  font-weight: 700;
+}
+
+.vehicle-source-note a, .pb-booking .booking-estimate a, .pb-booking .booking-contact-links a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: .23em;
+  text-decoration-thickness: 1px;
+}
+
+.vehicle-lease {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 22px;
+  margin-top: 22px;
+  padding: clamp(16px, 2vw, 24px);
+  border: 1px solid #69423e;
+  border-radius: 7px;
+  background: linear-gradient(115deg, #231a1c, #181719 88%);
+}
+
+.vehicle-lease h3 { margin: 0 0 4px; font-size: clamp(1.12rem, 1.8vw, 1.65rem); font-weight: 700; }
+.vehicle-lease p { color: #d9ccc6; font-size: .88rem; }
+.vehicle-lease strong { color: var(--white); font-variant-numeric: tabular-nums; }
+.vehicle-lease .outline { min-height: 44px; }
+
+.vehicle-hire-facts { margin: 18px 0 0; }
+.vehicle-hire-facts > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 12px;
+  padding-block: 10px;
+  border-top: 1px solid #ffffff23;
+  font-size: .84rem;
+}
+
+.vehicle-hire-facts dt { color: #d1c8bf; }
+.vehicle-hire-facts dd { margin: 0; text-align: end; font-weight: 750; font-variant-numeric: tabular-nums; }
+
+.pb-booking .booking-estimate dt small { display: block; margin-top: 3px; color: var(--booking-muted); font-size: .72rem; }
+.pb-booking .booking-contact-links { display: flex; flex-wrap: wrap; column-gap: 18px; font-size: .8rem; }
+.pb-booking .booking-contact-links svg { flex: none; }
+
+@media (max-width: 440px) {
+  .vehicle-lease .outline { width: 100%; justify-content: space-between; }
+}
