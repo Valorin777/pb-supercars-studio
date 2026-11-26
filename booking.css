@@ -1,0 +1,198 @@
+.pb-booking {
+  --booking-border: #3d3a36;
+  --booking-panel: #1c1a18;
+  --booking-text: #f1e9de;
+  --booking-muted: #c6bfb4;
+  --booking-accent: var(--red, #cb302e);
+  color: var(--booking-text);
+  color-scheme: dark;
+}
+
+.pb-booking .booking-overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid var(--booking-border);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+
+.pb-booking .booking-progress {
+  display: flex;
+  gap: clamp(13px, 3vw, 32px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--booking-muted);
+  font-size: .78rem;
+}
+
+.pb-booking .booking-progress li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+.pb-booking .booking-progress li span {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--booking-border);
+  font-size: .7rem;
+}
+
+.pb-booking .booking-progress [aria-current='step'] {
+  color: var(--booking-text);
+  font-weight: 700;
+}
+
+.pb-booking .booking-progress [aria-current='step'] span {
+  border-color: var(--booking-accent);
+  background: var(--booking-accent);
+  color: #171410;
+}
+
+.pb-booking .booking-mobile-subtotal { display: none; }
+.pb-booking .booking-layout { gap: clamp(22px, 4vw, 50px); }
+.pb-booking .booking-work { min-width: 0; }
+.pb-booking .booking-layout form, .pb-booking .booking-enquiry { display: grid; gap: 18px; }
+.pb-booking .booking-step-title h3, .pb-booking .booking-confirmation h3 {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  letter-spacing: -.045em;
+  font-weight: 550;
+  line-height: 1.1;
+}
+
+.pb-booking .booking-step-title h3:focus, .pb-booking .booking-confirmation h3:focus { outline: none; }
+.pb-booking .booking-step-title p, .pb-booking .booking-demo-intro p { margin: 6px 0 0; }
+.pb-booking .booking-fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.pb-booking .booking-fieldset legend { padding: 0; margin-bottom: 7px; font-size: .8rem; font-weight: 700; }
+.pb-booking .booking-help { margin: 0 0 8px; font-size: .75rem; }
+.pb-booking .form-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pb-booking .form-pair input { width: 100%; min-width: 0; }
+.pb-booking select { width: 100%; }
+.pb-booking input[type='radio'], .pb-booking input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  margin: 0;
+  accent-color: var(--booking-accent);
+}
+
+.pb-booking .booking-period-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+.pb-booking .booking-period-grid label {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  padding: 9px;
+  min-height: 56px;
+  border: 1px solid var(--booking-border);
+  border-radius: 5px;
+  background: var(--booking-panel);
+  cursor: pointer;
+}
+
+.pb-booking .booking-period-grid [data-selected='true'] { border-color: var(--booking-accent); }
+.pb-booking .booking-period-grid label small { display: block; margin-top: 3px; }
+.pb-booking .booking-period-grid label small, .pb-booking .booking-option small { color: var(--booking-muted); font-size: .69rem; font-weight: 450; }
+.pb-booking .booking-period-price { font-variant-numeric: tabular-nums; text-align: right; }
+
+.pb-booking .booking-handover { display: flex; flex-wrap: wrap; gap: 7px; }
+.pb-booking .booking-handover label, .pb-booking .booking-option {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 44px;
+  gap: 10px;
+  padding: 9px 10px;
+  border: 1px solid var(--booking-border);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pb-booking .booking-option { background: var(--booking-panel); align-items: flex-start; line-height: 1.5; }
+.pb-booking .booking-option input { margin-top: 2px; }
+.pb-booking .booking-option small { display: block; margin-top: 3px; }
+.pb-booking .booking-notice, .pb-booking .booking-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  border-left: 2px solid var(--booking-accent);
+  padding: 9px 11px;
+  margin: 0;
+  font-size: .8rem;
+  background: var(--booking-panel);
+}
+
+.pb-booking .booking-notice p { margin: 0; }
+.pb-booking .booking-notice svg { flex: none; }
+.pb-booking .booking-error { color: #ffc3bb; }
+.pb-booking input[aria-invalid='true'] { border-color: #ec7167 !important; }
+.pb-booking .booking-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 9px 14px; }
+.pb-booking .booking-actions .text-btn { min-height: 44px; }
+.pb-booking .booking-enquiry-card, .pb-booking .booking-demo-intro { padding: 14px 0 0; border-top: 1px solid var(--booking-border); }
+.pb-booking .booking-demo-intro h4 { margin: 0; font-size: .96rem; }
+.pb-booking .booking-demo-intro .outline { margin-top: 10px; }
+.pb-booking .booking-draft > summary { padding: 13px 0; font-size: .83rem; cursor: pointer; }
+.pb-booking .booking-draft textarea { display: block; width: 100%; resize: vertical; }
+
+.pb-booking .booking-estimate {
+  position: sticky;
+  top: 0;
+  border: 1px solid var(--booking-border);
+  border-radius: 6px;
+  background: var(--booking-panel);
+  overflow: hidden;
+}
+
+.pb-booking .booking-estimate .photo { aspect-ratio: 2.5; }
+.pb-booking .booking-estimate .photo img { object-position: center 57%; }
+.pb-booking .booking-estimate-body { padding: clamp(14px, 2vw, 22px); }
+.pb-booking .booking-kicker { margin: 0 0 5px; font-size: .73rem; font-weight: 700; }
+.pb-booking .booking-estimate h3 { font-size: clamp(1.1rem, 2vw, 1.5rem); letter-spacing: -.035em; margin: 0; }
+.pb-booking .booking-estimate-dates { margin: 5px 0 14px; font-size: .78rem; }
+.pb-booking .booking-estimate dl { margin: 0; }
+.pb-booking .booking-estimate dl > div { display: flex; justify-content: space-between; gap: 8px; padding: 8px 0; border-top: 1px solid var(--booking-border); font-size: .77rem; }
+.pb-booking .booking-estimate dd { margin: 0; text-align: right; flex-shrink: 0; font-weight: 650; font-variant-numeric: tabular-nums; }
+.pb-booking .booking-estimate .booking-total { align-items: baseline; padding: 10px 0; }
+.pb-booking .booking-total dd { font-size: clamp(1.2rem, 2.2vw, 1.8rem); font-weight: 550; letter-spacing: -.05em; }
+.pb-booking .booking-estimate .booking-help { margin: 9px 0 0; padding-top: 9px; border-top: 1px solid var(--booking-border); }
+
+.pb-booking .booking-confirmation { display: grid; justify-items: start; gap: 14px; max-width: 540px; padding-block: 10px; }
+.pb-booking .booking-confirmation > svg { color: #a7d8ad; }
+.pb-booking .booking-confirmation p { margin: 0; }
+.pb-booking .booking-reference { display: flex; align-items: center; flex-wrap: wrap; gap: 5px 20px; border-block: 1px solid var(--booking-border); padding-block: 12px; }
+.pb-booking .booking-reference span { font-size: .78rem; color: var(--booking-muted); }
+.pb-booking .booking-reference strong { letter-spacing: .04em; }
+
+@media (max-width: 760px) {
+  .pb-booking .booking-layout { grid-template-columns: minmax(0, 1fr); }
+  .pb-booking .booking-estimate { position: static; }
+  .pb-booking .booking-estimate .photo { display: none; }
+  .pb-booking .booking-mobile-subtotal { display: grid; text-align: right; }
+  .pb-booking .booking-mobile-subtotal span { color: var(--booking-muted); font-size: .65rem; }
+  .pb-booking .booking-mobile-subtotal strong { font-size: .8rem; font-variant-numeric: tabular-nums; }
+}
+
+@media (max-width: 520px) {
+  .pb-booking .booking-period-grid label {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-content: start;
+    gap: 2px 6px;
+    min-height: 65px;
+    padding: 7px 8px;
+  }
+  .pb-booking .booking-period-grid label > input { align-self: start; margin-top: 1px; }
+  .pb-booking .booking-period-price { grid-column: 2; text-align: left; }
+  .pb-booking .booking-handover { display: grid; }
+  .pb-booking .booking-progress { gap: 9px; font-size: .72rem; }
+  .pb-booking .booking-progress li { gap: 5px; }
+  .pb-booking .booking-progress li span { width: 21px; height: 21px; }
+}
