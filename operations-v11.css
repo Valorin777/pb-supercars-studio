@@ -319,6 +319,14 @@
 .operations-v11 .confirm .ghost { color: var(--ops-green) !important; border-color: #aab8ac !important; background: var(--ops-surface) !important; }
 .operations-v11 .confirm .cta { color: #fffefa; background: var(--ops-green); }
 
+@media (width > 965px) {
+  .operations-v11 .ops-sidebar { position: sticky; top: 0; min-height: 0; }
+  .operations-v11 .price-editor select { min-height: 43px; }
+  .operations-v11 .price-admin table { min-width: 0; }
+  .operations-v11 .price-admin thead th { white-space: normal; }
+  .operations-v11 .price-admin tr > :not(:first-child) { text-align: end; }
+}
+
 @media (max-width: 1100px) {
   .operations-v11 .ops-workflow { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); }
   .operations-v11 .ops-calendar-scroll-help { display: block; }
