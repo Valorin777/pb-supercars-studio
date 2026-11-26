@@ -379,3 +379,13 @@ body { color: var(--paper); }
 
 .studio-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 @media (max-width: 899px) { html { scroll-padding-bottom: 84px; } }
+
+/* Campaign photographs put the subject on the right for a safe headline area. */
+.handover-image img { object-position: 65% center; }
+@media (min-width: 701px) {
+  .pb-hero-backdrop .is-london img { object-position: 83% 62%; }
+}
+@media (min-width: 701px) and (max-width: 1150px) {
+  .editorial-hero { min-height: clamp(620px, 75svh, 720px); }
+  .pb-hero-backdrop .is-london img { object-position: 90% 62%; }
+}
