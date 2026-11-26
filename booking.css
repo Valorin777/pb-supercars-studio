@@ -3,10 +3,15 @@
   --booking-panel: #1c1a18;
   --booking-text: #f1e9de;
   --booking-muted: #c6bfb4;
-  --booking-accent: var(--red, #cb302e);
+  --booking-accent: var(--accent, #d6ed76);
   color: var(--booking-text);
   color-scheme: dark;
 }
+
+.pb-dialog .modal:has(.pb-booking) > .modal-head { background-color: #141413; }
+.pb-booking .primary { background: var(--booking-accent); color: #131512; }
+.pb-booking .primary:hover { background: #e5f3a8; }
+.pb-booking :is(input, select, textarea) { scroll-margin-top: 70px; }
 
 .pb-booking .booking-overview {
   display: flex;
@@ -142,10 +147,12 @@
 .pb-booking .booking-demo-intro .outline { margin-top: 10px; }
 .pb-booking .booking-draft > summary { padding: 13px 0; font-size: .83rem; cursor: pointer; }
 .pb-booking .booking-draft textarea { display: block; width: 100%; resize: vertical; }
+.pb-booking .booking-copy-status { color: var(--booking-muted); font-size: .78rem; }
+.pb-booking .booking-copy-status:empty { margin: 0; }
 
 .pb-booking .booking-estimate {
   position: sticky;
-  top: 0;
+  top: 68px;
   border: 1px solid var(--booking-border);
   border-radius: 6px;
   background: var(--booking-panel);
@@ -172,6 +179,31 @@
 .pb-booking .booking-reference span { font-size: .78rem; color: var(--booking-muted); }
 .pb-booking .booking-reference strong { letter-spacing: .04em; }
 
+.operations .ops-calendar-grid {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.operations .ops-calendar-grid th, .operations .ops-calendar-grid td { border: 1px solid #3a3b3e; }
+.operations .ops-calendar-grid th { padding: 9px 7px; font-size: .74rem; }
+.operations .ops-calendar-grid th:first-child { width: 185px; text-align: left; }
+.operations .ops-calendar-grid td { padding: 0; }
+.operations .ops-calendar-grid .cal-cell { width: 100%; min-height: 44px; font-size: .72rem; }
+.operations .ops-calendar-grid .cal-cell.service { opacity: 1; }
+.operations .ops-calendar-grid .cal-cell:focus-visible { outline-offset: -3px; }
+.operations .calendar-scroll:focus-visible { outline-offset: 3px; }
+.operations .ops-service-panel { margin-top: 18px; }
+.operations .ops-service-panel form { display: grid; justify-items: start; gap: 12px; }
+.operations .ops-service-panel .form-pair { width: 100%; }
+.operations .ops-service-panel .ops-success, .operations .ops-service-panel .error { margin-block: 12px; }
+.ops-detail .ops-enquiry-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 18px; margin: 8px 0 14px; }
+.ops-detail .ops-enquiry-facts div { padding: 11px 0; border-top: 1px solid #49433b; }
+.ops-detail .ops-enquiry-facts dt { margin-bottom: 3px; color: #c6bfb4; font-size: .73rem; }
+.ops-detail .ops-enquiry-facts dd { margin: 0; font-size: .87rem; overflow-wrap: anywhere; }
+.ops-detail .booking-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.ops-detail > .error, .ops-detail > .ops-success { margin-block: 12px; }
+
 @media (max-width: 760px) {
   .pb-booking .booking-layout { grid-template-columns: minmax(0, 1fr); }
   .pb-booking .booking-estimate { position: static; }
@@ -179,6 +211,10 @@
   .pb-booking .booking-mobile-subtotal { display: grid; text-align: right; }
   .pb-booking .booking-mobile-subtotal span { color: var(--booking-muted); font-size: .65rem; }
   .pb-booking .booking-mobile-subtotal strong { font-size: .8rem; font-variant-numeric: tabular-nums; }
+}
+
+@media (max-height: 740px) {
+  .pb-booking .booking-estimate { position: static; }
 }
 
 @media (max-width: 520px) {
